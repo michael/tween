@@ -1,0 +1,50 @@
+import( 'Tween.lib' );
+
+class ColoredObject {
+  float x;
+  float y;
+  float blueLevel;
+  float blueLevelTarget;
+  Tween t;
+  
+  public ColoredObject(float x, float y, blueLevel, blueLevelTarget) {
+    this.x = x;
+    this.y = y;
+    this.blueLevel = blueLevel;
+    this.blueLevelTarget = blueLevelTarget;
+		t = new Tween(this, "blueLevel", Tween.strongEaseInOut, blueLevel, blueLevelTarget, 2);
+  }
+  
+  public void update() {
+    t.tick();
+  }
+  
+  public void draw() {    
+    fill(123, 211, blueLevel);
+    noStroke();
+    ellipse(x, y, 100, 100);
+  }
+  
+  public void restart() {
+    t.start();
+  }
+}
+
+
+ColoredObject co;
+
+void setup() {
+  size(400, 150);
+  co = new ColoredObject(100,70, 255, 0);
+}
+
+void draw() {
+  background(244);
+  
+  co.update();
+  co.draw();
+}
+
+void mousePressed() {
+  co.restart();
+}

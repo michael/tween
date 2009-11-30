@@ -1,0 +1,53 @@
+import( 'Tween.lib' );
+
+class MovingObject {
+  float x;
+  float y;
+  float tx;
+  float ty;
+  Tween t;
+  Tween t2;
+  
+  public MovingObject(float x, float y, float tx, float ty) {
+    this.x = x;
+    this.y = y;
+    this.tx = tx;
+    this.ty = ty;
+		t = new Tween(this, "x", Tween.strongEaseInOut, x, tx, 2);
+		t2 = new Tween(this, "y", Tween.bounceEaseInOut, y, ty, 2);
+  }
+  
+  public void update() {
+    t.tick();
+    t2.tick();
+  }
+  
+  public void draw() {
+    noStroke();
+    fill(120);
+    ellipse(x, y, 30, 30);
+  }
+  
+  public void restart() {
+    t.start();
+    t2.start();
+  }
+}
+
+MovingObject mo;
+
+void setup() {
+  size(400, 150);
+  mo = new MovingObject(50, 30, 360, 130);
+}
+
+void draw() {
+  background(244);
+  
+  mo.update();
+  mo.draw();
+}
+
+void mousePressed() {
+  mo.restart();
+}

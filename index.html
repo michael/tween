@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+<head> 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+	<title>Tween.lib - Motion Tweening for Processing.js</title> 
+	<link rel="stylesheet" href="style.css" type="text/css" />
+  <!-- jQuery Library -->
+  <script src="./lib/jquery-1.3.2.min.js"></script>
+  <!-- Processing.js Animation Library -->
+  <script src="./lib/processing.js"></script>
+</head>
+<body>
+<a href="http://github.com/michael/tween"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub" /></a>
+ 
+<div id="wrapper">
+	<div id="header"> 
+		<h1>Tween.lib</h1> 
+		<p>
+		   Motion Tweening for <a href="http://processingjs.org">Processing.js</a>.
+		</p> 
+		
+		<ul id="nav">
+      <li><a href="http://quasipartikel.at/2009/11/30/motion-tweening-for-processingjs/">Blogpost</a></li>
+      <li><a href="http://github.com/michael/tween">Source</a></li>
+      <li><a href="http://github.com/michael/tween/zipball/master">Download</a></li>
+      <li><a href="http://github.com/michael/tween/issues">Bugs</a></li>
+		</ul>
+	</div>
+	
+	<div id="content">
+    <p>
+      The library is based on Philippe Maegerman's <a href="http://jstween.blogspot.com/#TweenEasing">Javascript version</a> of Robert Penner's <a href="http://www.robertpenner.com/easing/penner_chapter7_tweening.pdf">Motion Tweening Library</a> for ActionScript.
+    </p><p>
+      To get started, please read the corresponding <a href="http://quasipartikel.at/2009/11/30/motion-tweening-for-processingjs/">blogpost</a>.
+    </p>
+    
+    <h2>Motion Tweening</h2>
+    
+    The example shows the application of two different Tweens for manipulating x and y coordinates of the graphical object. Please click on the canvas to start/restart the Tween. 
+    <br/><br/>
+    <canvas id="tween1" datasrc="tween1.pjs" width="400" height="150"></canvas>
+    
+    <h2>Color Tweening</h2>
+    
+    Tweening is not restricted to motion. You can use the same approach to change a color over time.<br/><br/>
+    
+    <canvas id="tween2" datasrc="tween2.pjs" width="400" height="150"></canvas>
+    
+    <h2>In the wild</h2>
+    
+    Here's the result of my animated donut chart, which will be integrated in the next version of <a href="http://askken.heroku.com">ASKKEN™</a>. It makes heavy use of Tweens.
+
+    You can find a dedicated demo page at <a href="http://quasipartikel.at/donut">http://quasipartikel.at/donut</a> and get the source code from <a href="http://github.com/donut">Github</a>.
+    <br/><br/>
+    <canvas id="donut" datasrc="donut.pjs" width="400" height="400"></canvas>
+    
+    <h2>Misc</h2>
+    <p>
+    There are no limitations. Do whatever you want with this sketch.
+    If you did some nice modifications, just let me know (via Github). I'd be happy to include them.
+    </p><p>
+    If you spot some bugs please add them to the <a href="http://github.com/michael/tween/issues">issue tracker</a>.
+    Source code is available at <a href="http://github.com/michael/tween/" title="Social Coding">Github</a>.
+    
+    </p>
+	</div> 
+ 
+	<div id="footer"> 
+		<p class="left">A <a href="http://quasipartikel.at/">Quasipartikel</a> Production</p>
+		<p class="right">Template adopted from <a href="http://orderedlist.com/demos/fancy-zoom-jquery/">orderedlist.com</a></p>
+		<br class="clear"/>
+	</div> 
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-10368067-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body> 
+</html>
