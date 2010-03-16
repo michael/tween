@@ -1,5 +1,3 @@
-import( 'Tween.lib' );
-
 class MovingObject {
   float x;
   float y;
